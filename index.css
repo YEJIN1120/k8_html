@@ -1,0 +1,13 @@
+html {
+  background-color: rgb(227, 228, 228);
+}
+body {
+  flex-direction: column;
+  align-items: center;
+}
+
+body > h1 {
+  background-color:rgb(194, 196, 199);
+  padding: 30px;
+  margin: 20px;
+}

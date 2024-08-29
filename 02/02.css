@@ -1,0 +1,155 @@
+* {
+  padding: 0px;
+  margin: 0px;
+
+  box-sizing: border-box;
+}
+
+header,main,footer {
+  width: 80%;
+  margin-left: 10%;
+}
+
+header, main {
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+header, header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  height: 80px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+/* nav > ul { */
+/* header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+.menuli {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+
+  background-color:black;
+}
+
+.menuli:hover {
+  background-color: lightskyblue;
+}
+
+a {
+  text-decoration: none;
+
+  color: white;
+}
+
+article {
+  padding: 60px;
+}
+
+h1, article > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* p > span {
+  display: inline-flex;
+  flex-direction: row;
+} */
+
+section {
+  margin: 20px;
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+.secDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.secDiv > div {
+  width: 20%
+}
+
+.secDiv img {
+  width: 80%;
+  border-radius: 5%
+}
+
+.secDiv > p {
+  width: 80%;
+  font-size: smaller;
+}
+
+footer > ul {
+  font-size: small;
+  margin: 20px;
+  padding: 10px;
+}
+
+article > p {
+  font-size: smaller;
+}
+
+@media screen and (max-width : 1024px) {
+  header, main, footer {
+    width : 100%;
+    margin-left:0px;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  header, header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+  }
+  header {
+    height: auto;
+    padding: 20px;
+  }
+}
+
+header li {
+  width: 90%;
+  margin-bottom: 5px;
+}
