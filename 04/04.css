@@ -1,0 +1,5 @@
+h2 > span {
+  color: darkgray;
+  font-weight: bold;
+  padding-left: 10px;
+}

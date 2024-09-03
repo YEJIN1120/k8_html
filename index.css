@@ -1,9 +1,11 @@
 html {
   background-color: rgb(227, 228, 228);
 }
+
 body {
   flex-direction: column;
   align-items: center;
+  
 }
 
 body > h1 {

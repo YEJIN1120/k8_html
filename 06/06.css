@@ -1,0 +1,31 @@
+.secDice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.secDice > div {
+  margin: 10px;
+}
+
+h2 {
+  margin: 10px;
+  text-align: center;
+}
+
+.secDice > button {
+  margin: 5px;
+}
+
+#msg {
+  width: 90%;
+  height: 40px;
+  background-color: white;
+  border: 1px dotted gray;
+  padding: 10px;
+  text-align: center;
+
+  font-weight: bold;
+  color: black;
+}
