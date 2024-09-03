@@ -22,3 +22,8 @@
     background-color: aqua;
   }
 
+  select{
+    width: 80%;
+    height: 40px;
+  }
+
