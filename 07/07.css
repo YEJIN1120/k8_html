@@ -19,11 +19,31 @@
     justify-content: center;
     align-items: center;
 
-    background-color: aqua;
+    background-color: gray;
   }
 
-  select{
+  select {
     width: 80%;
     height: 40px;
+  }
+
+  input {
+    width: 70%;
+    height: 40px;
+  }
+
+  label {
+    width: 10%;
+    height: 40px;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  #txt2, #txt1 {
+    background-color: lightgray;
   }
 
