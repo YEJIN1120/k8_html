@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   sel2.addEventListener("change",() => {
     handleChange(sel2,sel1,lb2,lb1,txt1,txt2);
-  });
+  }); 
 
   txt1.addEventListener("input", () => {
     console.log(txt1.value)
