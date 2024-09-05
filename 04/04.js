@@ -20,4 +20,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
     console.log("n=", n);
     msg.innerHTML = `<h2>${bt3.textContent}:<span>${n}</span></h2>`;
   });
-});
+}); 
