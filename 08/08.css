@@ -1,0 +1,27 @@
+.sec, .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec {
+  margin: 2px; 
+  width: 100%;
+  flex-direction: column;
+}
+.row {
+  width: 80%;
+  
+  flex-direction: row;
+}
+
+#txt1 {
+  height: 40px;
+  margin-right: 10px;
+}
+ 
+
+input {
+  width: 40%;
+}
+ 
