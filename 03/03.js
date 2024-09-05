@@ -4,6 +4,6 @@ function handleClick() {
 }
 
 //ES6 : 화살표 함수
-const handleClick2 = () => {
+const handleClick2 = () => { 
   alert('화살표 함수');
 }
