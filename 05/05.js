@@ -8,4 +8,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
     img.setAttribute('src', `../img/${n}.png`);
     img.setAttribute('alt', `${n}.png`);
   });
-});
+}); 
