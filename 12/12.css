@@ -1,0 +1,112 @@
+#boxofficeMain {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  height: 500px;
+}
+
+.sec , .divDt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec {
+  width: 100%;
+  flex-direction: column;
+}
+
+.divDt {
+  width: 80%;
+  height: 60px;
+  background-color: aliceblue;
+  flex-direction:row;
+
+  border: 1px dotted gray;
+
+}
+
+.sec > ul {
+  list-style: none;
+  width: 80%;
+}
+
+.mvli {
+  width: 100%;
+  height: 35px;
+
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  
+
+  margin: 5px 2px;
+}
+
+.mvli:hover {
+  background-color: aliceblue;
+  border-bottom: 1px solid lightblue;
+}
+
+.rank {
+  width: 25px;
+  height: 25px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  color: white;
+
+  border-radius: 10%;
+  margin-right: 20px;
+}
+
+input[type = date], select, fieldset {
+  width: 40%;
+  height: 30px;
+  margin-left: 5px;
+}
+
+fieldset {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.rank:hover {
+  background-color: darkgray;
+}
+
+.movieNm {
+  width: 60%;
+}
+
+.openDt {
+  width: 20%;
+}
+
+.rankInten {
+  width: 10%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.spRed {
+  color: red;
+}
+
+.spBlue {
+  color: blue;
+}
+
+
