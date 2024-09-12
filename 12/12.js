@@ -1,7 +1,45 @@
+//전역변수
+const testAPI = "82ca741a2844c5c180a208137bb92bd7";
+
+//상세정보 가져오기
+const getDetail = (movieCd) => {
+  const mvinfo = document.querySelector("#mvinfo");
+  let url= "https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?";
+  url = `${url}&key=${testAPI}&movieCd=${movieCd}`;
+  mvinfo.innerHTML = movieCd;
+
+  console.log(url);
+  fetch(url)
+    .then(resp => resp.json())
+    .then(data => {
+      let movieInfo = data.movieInfoResult.movieInfo;
+      let genres = movieInfo.genres.map(item => item.genreNm).join(",");
+      let companys = movieInfo.companys.map(item => `${item.companysNm}(${item.companyPartNm}`).join(",");
+      let actors = movieInfo.actors.slice(0,3).map(item => item.peopleNm).join(",");
+      console.log(genres)
+      console.log(companys)
+
+      mvinfo.innerHTML = `
+      <div>${movieInfo.movieNm} (${movieInfo.openDt})</div>
+      <ul>
+        <li>장르 : ${genres}</li>
+        <li>출연진 : ${actors}</li>
+      </ul>
+    `;
+    })
+    .catch(err => console.error(err));
+}
+
+    
+
+  
+
+
+
+
 //OPEN API 데이터 가져오기
 const getData = (selDt, ul, gubun) => {
-  console.log(gubun);
-  const testAPI = "82ca741a2844c5c180a208137bb92bd7";
+  console.log("gubun = ", gubun);
   let url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?";
   url = `${url}key=${testAPI}&targetDt=${selDt}`;
   if (gubun != "T") {
@@ -15,8 +53,10 @@ const getData = (selDt, ul, gubun) => {
     .then(data => {
       let dailyBoxOfficeList = data.boxOfficeResult.dailyBoxOfficeList;
       console.log(dailyBoxOfficeList)
+
     let tm = dailyBoxOfficeList.map(item => 
-      `<li class = "mvli">
+      `<a href="#" onClick= "getDetail(${item.movieCd})">
+        <li class = "mvli">
         <span class = "rank">${item.rank}</span>
         <span class = "movieNm">${item.movieNm}</span>
         <span class = "openDt">${item.openDt}</span>
@@ -26,7 +66,8 @@ const getData = (selDt, ul, gubun) => {
                                     '<span class="spBlue">▼</span>'  : '-'}
             ${item.rankInten != 0 ? Math.abs(item.rankInten) : ''}
             </span>
-        </li>`)
+          </li>
+        </a>`)
 
         tm = tm.join("")
         ul.innerHTML = tm;
@@ -63,17 +104,17 @@ const getYesterday = () => {
 // radio 값 가져오기
 const getGubun = () => {
   // radio 요소 가져오기 (풀어쓴것)
-  const r1 = document.querySelector("#r1");
-  const r2 = document.querySelector("#r2");
-  const r3 = document.querySelector("#r3");
+  // const r1 = document.querySelector("#r1");
+  // const r2 = document.querySelector("#r2");
+  // const r3 = document.querySelector("#r3");
 
-  console.log("r1 = ", r1.checked);
-  console.log("r2 = ", r2.checked);
-  console.log("r3 = ", r3.checked);
+  // console.log("r1 = ", r1.checked);
+  // console.log("r2 = ", r2.checked);
+  // console.log("r3 = ", r3.checked);
 
-  if(r1.checked) return r1.value;
-  else if(r2.checked) return r2.value;
-  else if(r3.checked) return r3.value;
+  // if(r1.checked) return r1.value;
+  // else if(r2.checked) return r2.value;
+  // else if(r3.checked) return r3.value;
 
    //radio버튼의 클릭된 것만 가져오기 (for 반복문을 사용하지 않고 출력하는 방법)
    const gubun = document.querySelector("input[name=mvGubun]:checked");
@@ -129,5 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if(radio.checked) getData(dt.value.replaceAll("-",""), ul, radio.value);
     })
   }
+
+
 
 });

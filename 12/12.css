@@ -1,11 +1,30 @@
-#boxofficeMain {
+#boxofficeMain, #mvfooter {
   display: flex;
 
   flex-direction: column;
   justify-content: start;
   align-items: center;
+}
 
+#boxofficeMain {
   height: 500px;
+
+  justify-content: start;
+  align-items: center;
+}
+
+#mvfooter {
+  width: 60%;
+  height: 80px;
+  margin-left: 20%;
+  background-color: aliceblue;
+  color: black;
+  font-size: small;
+  padding: 20px;
+
+  justify-content: left;
+  justify-content: center;
+
 }
 
 .sec , .divDt {
@@ -107,6 +126,10 @@ label {
 
 .spBlue {
   color: blue;
+}
+
+a {
+  text-decoration: none;
 }
 
 
