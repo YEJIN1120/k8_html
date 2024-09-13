@@ -1,5 +1,8 @@
 let arr =  [1,2,3,4,5];
 
+
+parseInt
+
 console.log("arr : ", arr);
 console.log("arr 개수 : ", arr.length);
 
