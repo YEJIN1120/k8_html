@@ -1,4 +1,4 @@
-# 📝 HTML/CSS 실습 저장소 - k8_html
+# 📝 HTML/CSS 실습 - k8_html
 
 ## 📌 프로젝트 소개
 
