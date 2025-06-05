@@ -13,7 +13,7 @@ K-Digital Training 과정 중 웹 퍼블리싱 능력을 향상시키기 위한 
 ## 🛠 사용 기술
 
 - HTML5
-  - 시맨틱 마크업 (<header>, <main>, <footer>, <section> 등)
+  - 시맨틱 마크업 (`<header>`, `<main>`, `<footer>`, `<section>` 등)
   - 리스트, 테이블, 폼 태그 등 다양한 HTML 요소 사용
 - CSS3
   - 선택자 및 박스 모델
